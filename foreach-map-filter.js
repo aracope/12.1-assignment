@@ -20,7 +20,7 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+
 }
 
 /*
