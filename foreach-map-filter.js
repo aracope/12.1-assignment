@@ -39,10 +39,14 @@ Write a function called showFirstAndLast which accepts an array of strings and r
 Examples:
     showFirstAndLast(['colt','matt', 'tim', 'test']) // ["ct", "mt", "tm", "tt"]
     showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
-
+           n
 */
 function showFirstAndLast(arr){
-    
+  let firstAndLast = []; 
+  arr.forEach(function(val) {
+    firstAndLast.push(val[0] + val[val.length - 1]);
+  });
+  return firstAndLast;
 }
 
 /*
