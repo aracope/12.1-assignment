@@ -13,7 +13,7 @@ function doubleValues(arr) {
     });
   return doubledValues;
 }
-
+console.log(doubleValues([5,1,2,3,10]));
 /*
 Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
 
@@ -32,6 +32,7 @@ function onlyEvenValues(arr) {
     });
   return evenValues;
 }
+console.log(onlyEvenValues([5,1,2,3,10]));
 
 /*
 Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.
@@ -39,7 +40,6 @@ Write a function called showFirstAndLast which accepts an array of strings and r
 Examples:
     showFirstAndLast(['colt','matt', 'tim', 'test']) // ["ct", "mt", "tm", "tt"]
     showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
-           n
 */
 
 function showFirstAndLast(arr) {
@@ -49,9 +49,10 @@ function showFirstAndLast(arr) {
     });
   return firstAndLast;
 }
+console.log(showFirstAndLast(['colt','matt', 'tim', 'test']));
 
 /*
-Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns the array passed to the function with the new key and value added for each object 
+Write a function called addKeyAndValue which accepts an array of vowelCountects, a key, and a value and returns the array passed to the function with the new key and value added for each vowelCountect 
 
 Examples:
     addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') 
@@ -66,9 +67,9 @@ function addKeyAndValue(arr, key, value) {
     });
   return arr;
 }
-
+console.log(addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor'));
 /*
-Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count
+Write a function called vowelCount which accepts a string and returns an vowelCountect with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count
 
 Examples:
     vowelCount('Elie') // {e:2,i:1};
@@ -78,8 +79,22 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str) {
+  let splitArray = str.toLowerCase().split("");
+  let vowelCount = {};
+  const vowels = "aeiou";
 
+  splitArray.forEach(function(letter){
+      if(vowels.indexOf(letter) !== -1) {
+          if(vowelCount[letter]){
+              vowelCount[letter]++;
+          } else{
+              vowelCount[letter] = 1;
+          }
+      }
+  });
+  return vowelCount;
 }
+console.log(vowelCount('I Am awesome and so are you'));
 
 /*
 Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
@@ -104,7 +119,7 @@ function valTimesIndex(arr) {
 }
 
 /*
-Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object.
+Write a function called extractKey which accepts an array of vowelCountects and some key and returns a new array with the value of that key in each vowelCountect.
 
 Examples:
     extractKey([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'name') // ['Elie', 'Tim', 'Matt', 'Colt']
@@ -115,7 +130,7 @@ function extractKey(arr, key) {
 }
 
 /*
-Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of  "last" in each object, concatenated together with a space. 
+Write a function called extractFullName which accepts an array of vowelCountects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of  "last" in each vowelCountect, concatenated together with a space. 
 
 Examples:
     extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]) // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
@@ -126,7 +141,7 @@ function extractFullName(arr) {
 }
 
 /*
-Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
+Write a function called filterByValue which accepts an array of vowelCountects and a key and returns a new array with all the vowelCountects that contain that key.
 
 Examples:
     filterByValue([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner') // [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
@@ -145,13 +160,13 @@ Examples:
 function find(arr, searchValue) { }
 
 /*
-Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.
+Write a function called findInvowelCount which accepts an array of vowelCountects, a key, and some value to search for and returns the first found value in the array.
 
 Examples:
-    findInObj([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner',true) // {first: 'Tim', last:"Garcia", isCatOwner: true}
+    findInvowelCount([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner',true) // {first: 'Tim', last:"Garcia", isCatOwner: true}
 */
 
-function findInObj(arr, key, searchValue) { }
+function findInvowelCount(arr, key, searchValue) { }
 
 /*
 Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) removed. Every character in the new string should be lowercased.
