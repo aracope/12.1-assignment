@@ -58,14 +58,14 @@ describe("#vowelCount", function() {
   });
 });
 
-// describe("#doubleValuesWithMap", function() {
-//   it("doubles values in an array", function() {
-//     expect(doubleValuesWithMap([1, 2, 3])).toEqual([2, 4, 6]);
-//   });
-//   it("works for negative numbers", function() {
-//     expect(doubleValuesWithMap([1, -2, -3])).toEqual([2, -4, -6]);
-//   });
-// });
+describe("#doubleValuesWithMap", function() {
+  it("doubles values in an array", function() {
+    expect(doubleValuesWithMap([1, 2, 3])).toEqual([2, 4, 6]);
+  });
+  it("works for negative numbers", function() {
+    expect(doubleValuesWithMap([1, -2, -3])).toEqual([2, -4, -6]);
+  });
+});
 
 // describe("#valTimesIndex", function() {
 //   it("returns a new array with each value multiplied by the index", function() {
