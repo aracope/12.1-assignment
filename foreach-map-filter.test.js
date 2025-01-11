@@ -130,24 +130,24 @@ describe("#find", function() {
   });
 });
 
-// describe("#findInObj", function() {
-//   var arr = [
-//     { first: "Elie", last: "Schoppik" },
-//     { first: "Tim", last: "Garcia", isCatOwner: true },
-//     { first: "Matt", last: "Lane" },
-//     { first: "Colt", last: "Steele", isCatOwner: true }
-//   ];
-//   it("returns the first value found in an array", function() {
-//     expect(findInObj(arr, "isCatOwner", true)).toEqual({
-//       first: "Tim",
-//       last: "Garcia",
-//       isCatOwner: true
-//     });
-//   });
-//   it("returns undefined if the value is not found", function() {
-//     expect(findInObj(arr, "isCatOwner", false)).toEqual(undefined);
-//   });
-// });
+describe("#findInObj", function() {
+  var arr = [
+    { first: "Elie", last: "Schoppik" },
+    { first: "Tim", last: "Garcia", isCatOwner: true },
+    { first: "Matt", last: "Lane" },
+    { first: "Colt", last: "Steele", isCatOwner: true }
+  ];
+  it("returns the first value found in an array", function() {
+    expect(findInObj(arr, "isCatOwner", true)).toEqual({
+      first: "Tim",
+      last: "Garcia",
+      isCatOwner: true
+    });
+  });
+  it("returns undefined if the value is not found", function() {
+    expect(findInObj(arr, "isCatOwner", false)).toEqual(undefined);
+  });
+});
 
 // describe("#removeVowels", function() {
 //   it("removes all vowels from a string", function() {
