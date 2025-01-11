@@ -231,4 +231,14 @@ Examples:
     doubleOddNumbers([4,4,4,4,4]) // []
 */
 
-function doubleOddNumbers(arr) { }
+// filter first, and then map to have a smaller array.
+
+function doubleOddNumbers(arr) { 
+  return arr.filter(function(val) {
+    return val % 2 !== 0
+  })
+  .map(function(val) {
+    return val * 2;
+  });
+}
+console.log(doubleOddNumbers([1,2,3,4,5]));
