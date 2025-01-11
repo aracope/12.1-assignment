@@ -120,8 +120,11 @@ Examples:
 */
 
 function valTimesIndex(arr) {
-
+  return arr.map(function(num, idx) {
+    return num * idx;
+  });
 }
+console.log(valTimesIndex([1,2,3,-2,-3]));
 
 /*
 Write a function called extractKey which accepts an array of vowelCountects and some key and returns a new array with the value of that key in each vowelCountect.
