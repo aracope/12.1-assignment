@@ -148,8 +148,11 @@ Examples:
 */
 
 function extractFullName(arr) {
-
+  return arr.map(function(val) {
+    return val.first + ' ' + val.last;
+  });
 }
+console.log(extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]));
 
 /*
 Write a function called filterByValue which accepts an array of vowelCountects and a key and returns a new array with all the vowelCountects that contain that key.
