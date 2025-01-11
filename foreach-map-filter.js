@@ -87,7 +87,7 @@ function vowelCount(str) {
       if(vowels.indexOf(letter) !== -1) {
           if(vowelCount[letter]){
               vowelCount[letter]++;
-          } else{
+          } else {
               vowelCount[letter] = 1;
           }
       }
@@ -207,7 +207,21 @@ Examples:
     removeVowels('ZZZZZZ') // ('zzzzzz')
 */
 
-function removeVowels(str) { }
+function removeVowels(str) { 
+  const vowels = "aieou";
+  let strArr = str.toLowerCase().split('');
+  let newArr = strArr.filter(function(letter){
+      if(vowels.indexOf(letter)  === -1) {
+          return letter;
+      }
+  });
+  let newStr = '';
+  newArr.forEach(function(letter){
+      newStr += letter;
+  });
+  return newStr;
+}
+console.log(removeVowels('Elie'));
 
 /*
 Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd numbers).
